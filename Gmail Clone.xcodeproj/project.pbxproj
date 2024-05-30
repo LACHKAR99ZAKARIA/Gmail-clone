@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		01F99FDB2C021A9400F969EA /* Gmail_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F99FDA2C021A9400F969EA /* Gmail_CloneApp.swift */; };
-		01F99FDD2C021A9400F969EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F99FDC2C021A9400F969EA /* ContentView.swift */; };
+		01F99FDD2C021A9400F969EA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F99FDC2C021A9400F969EA /* RootView.swift */; };
 		01F99FDF2C021A9700F969EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F99FDE2C021A9700F969EA /* Assets.xcassets */; };
 		01F99FE22C021A9700F969EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F99FE12C021A9700F969EA /* Preview Assets.xcassets */; };
+		01F99FEA2C021B6500F969EA /* Discovery in Frameworks */ = {isa = PBXBuildFile; productRef = 01F99FE92C021B6500F969EA /* Discovery */; };
+		01F99FEC2C021B6500F969EA /* GoogleAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 01F99FEB2C021B6500F969EA /* GoogleAPIRuntime */; };
+		01F99FF42C021D1300F969EA /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F99FF32C021D1300F969EA /* UserSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01F99FD72C021A9400F969EA /* Gmail Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gmail Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F99FDA2C021A9400F969EA /* Gmail_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gmail_CloneApp.swift; sourceTree = "<group>"; };
-		01F99FDC2C021A9400F969EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		01F99FDC2C021A9400F969EA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		01F99FDE2C021A9700F969EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01F99FE12C021A9700F969EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		01F99FF32C021D1300F969EA /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F99FEA2C021B6500F969EA /* Discovery in Frameworks */,
+				01F99FEC2C021B6500F969EA /* GoogleAPIRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +57,11 @@
 		01F99FD92C021A9400F969EA /* Gmail Clone */ = {
 			isa = PBXGroup;
 			children = (
+				01F99FF12C021D0100F969EA /* Helpers */,
+				01F99FF02C021C3500F969EA /* ViewModel */,
+				01F99FEE2C021B6F00F969EA /* Service */,
+				01F99FED2C021B6A00F969EA /* Sceanes */,
 				01F99FDA2C021A9400F969EA /* Gmail_CloneApp.swift */,
-				01F99FDC2C021A9400F969EA /* ContentView.swift */,
 				01F99FDE2C021A9700F969EA /* Assets.xcassets */,
 				01F99FE02C021A9700F969EA /* Preview Content */,
 			);
@@ -65,6 +74,52 @@
 				01F99FE12C021A9700F969EA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		01F99FED2C021B6A00F969EA /* Sceanes */ = {
+			isa = PBXGroup;
+			children = (
+				01F99FEF2C021BC900F969EA /* Root */,
+			);
+			path = Sceanes;
+			sourceTree = "<group>";
+		};
+		01F99FEE2C021B6F00F969EA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		01F99FEF2C021BC900F969EA /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				01F99FDC2C021A9400F969EA /* RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		01F99FF02C021C3500F969EA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		01F99FF12C021D0100F969EA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				01F99FF22C021D0600F969EA /* UserSession */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		01F99FF22C021D0600F969EA /* UserSession */ = {
+			isa = PBXGroup;
+			children = (
+				01F99FF32C021D1300F969EA /* UserSession.swift */,
+			);
+			path = UserSession;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +138,10 @@
 			dependencies = (
 			);
 			name = "Gmail Clone";
+			packageProductDependencies = (
+				01F99FE92C021B6500F969EA /* Discovery */,
+				01F99FEB2C021B6500F969EA /* GoogleAPIRuntime */,
+			);
 			productName = "Gmail Clone";
 			productReference = 01F99FD72C021A9400F969EA /* Gmail Clone.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 01F99FCE2C021A9400F969EA;
+			packageReferences = (
+				01F99FE82C021B6500F969EA /* XCRemoteSwiftPackageReference "google-api-swift-client" */,
+			);
 			productRefGroup = 01F99FD82C021A9400F969EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +199,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F99FDD2C021A9400F969EA /* ContentView.swift in Sources */,
+				01F99FF42C021D1300F969EA /* UserSession.swift in Sources */,
+				01F99FDD2C021A9400F969EA /* RootView.swift in Sources */,
 				01F99FDB2C021A9400F969EA /* Gmail_CloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +405,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01F99FE82C021B6500F969EA /* XCRemoteSwiftPackageReference "google-api-swift-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleapis/google-api-swift-client.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01F99FE92C021B6500F969EA /* Discovery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01F99FE82C021B6500F969EA /* XCRemoteSwiftPackageReference "google-api-swift-client" */;
+			productName = Discovery;
+		};
+		01F99FEB2C021B6500F969EA /* GoogleAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01F99FE82C021B6500F969EA /* XCRemoteSwiftPackageReference "google-api-swift-client" */;
+			productName = GoogleAPIRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01F99FCF2C021A9400F969EA /* Project object */;
 }
